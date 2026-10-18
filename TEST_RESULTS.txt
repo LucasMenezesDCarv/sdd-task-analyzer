@@ -1,0 +1,43 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.13.5, pytest-9.0.2, pluggy-1.6.0 -- /opt/pyvenv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.5', 'Platform': 'Linux-6.18.55-x86_64-with-glibc2.41', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.13.0', 'ddtrace': '4.4.0', 'Faker': '40.1.2', 'asyncio': '1.3.0', 'cov': '7.0.0', 'json-report': '1.5.0', 'metadata': '3.1.1'}, 'PLATFORM': 'linux/amd64', 'CI': 'true'}
+rootdir: /mnt/data/sdd-task-analyzer
+plugins: anyio-4.13.0, ddtrace-4.4.0, Faker-40.1.2, asyncio-1.3.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+[1mcollecting ... [0mcollected 22 items
+
+tests/test_harness.py::test_CA01_analise_bem_sucedida [32mPASSED[0m[32m             [  4%][0m
+tests/test_harness.py::test_CA02_conclusao_anterior_ao_inicio [32mPASSED[0m[32m     [  9%][0m
+tests/test_harness.py::test_CA03_ausencia_de_concluidas [32mPASSED[0m[32m           [ 13%][0m
+tests/test_harness.py::test_CA04_prazo_exato [32mPASSED[0m[32m                      [ 18%][0m
+tests/test_harness.py::test_CA05_inicio_ausente [32mPASSED[0m[32m                   [ 22%][0m
+tests/test_harness.py::test_CA06_grupos_vazios [32mPASSED[0m[32m                    [ 27%][0m
+tests/test_harness.py::test_CA07_prioridade_invalida [32mPASSED[0m[32m              [ 31%][0m
+tests/test_harness.py::test_CA08_fuso_utc_obrigatorio [32mPASSED[0m[32m             [ 36%][0m
+tests/test_harness.py::test_CA09_identificador_repetido [32mPASSED[0m[32m           [ 40%][0m
+tests/test_harness.py::test_CA10_duracao_zero [32mPASSED[0m[32m                     [ 45%][0m
+tests/test_harness.py::test_CA11_nao_modificar_entrada [32mPASSED[0m[32m            [ 50%][0m
+tests/test_harness.py::test_CA12_arredondamento [32mPASSED[0m[32m                   [ 54%][0m
+tests/test_harness.py::test_datas_obrigatorias_sem_fuso_sao_rejeitadas[data_criacao] [32mPASSED[0m[32m [ 59%][0m
+tests/test_harness.py::test_datas_obrigatorias_sem_fuso_sao_rejeitadas[prazo] [32mPASSED[0m[32m [ 63%][0m
+tests/test_harness.py::test_campo_obrigatorio_ausente [32mPASSED[0m[32m             [ 68%][0m
+tests/test_harness.py::test_campo_desconhecido_rejeitado [32mPASSED[0m[32m          [ 72%][0m
+tests/test_harness.py::test_id_booleano_rejeitado [32mPASSED[0m[32m                 [ 77%][0m
+tests/test_harness.py::test_prazo_anterior_a_criacao [32mPASSED[0m[32m              [ 81%][0m
+tests/test_harness.py::test_data_inicio_anterior_a_criacao [32mPASSED[0m[32m        [ 86%][0m
+tests/test_harness.py::test_status_invalido [32mPASSED[0m[32m                       [ 90%][0m
+tests/test_harness.py::test_pendente_nao_pode_ter_conclusao [32mPASSED[0m[32m       [ 95%][0m
+tests/test_harness.py::test_lista_de_tipo_invalido [32mPASSED[0m[32m                [100%][0m
+
+[32m============================== [32m[1m22 passed[0m[32m in 0.11s[0m[32m ==============================[0m
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
