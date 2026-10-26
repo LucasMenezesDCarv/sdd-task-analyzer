@@ -1,5 +1,5 @@
 services:
-  task-analyzer-tests:
+  test-harness:
     build:
       context: .
       dockerfile: Dockerfile
