@@ -45,3 +45,40 @@ A implementação foi preparada com apoio de IA e os testes são independentes d
 
 ## GitHub
 Fluxo sugerido: `main` para versões aprovadas, `develop` para integração e `feature/*` para mudanças isoladas. Abrir PR da branch de funcionalidade para `main`, descrever alterações, testes executados, evidências e revisão humana. Não afirmar revisão independente quando o trabalho for individual.
+
+
+## Fase 3 — CI/CD e Docker
+
+O projeto utiliza GitHub Actions para executar os testes
+automatizados e verificar a construção e execução da
+imagem Docker.
+
+### Construir a imagem
+
+```bash
+docker compose build
+```
+
+### Executar os testes no contêiner
+
+```bash
+docker compose run --rm test-harness
+```
+
+### Validar a configuração
+
+```bash
+docker compose config
+```
+
+### Governança de IA
+
+O arquivo `RELATORIO_GOVERNANCA_ETICA_IA.md` documenta
+os riscos, os controles e a revisão humana relacionados
+ao desenvolvimento assistido por Inteligência Artificial.
+
+### Integração contínua
+
+Consulte as execuções do projeto:
+
+https://github.com/LucasMenezesDCarv/sdd-task-analyzer/actions

@@ -1,0 +1,14 @@
+services:
+  test-harness:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: task-analyzer:ci
+    working_dir: /app
+    command:
+      - python
+      - -m
+      - pytest
+      - tests/test_harness.py
+      - -v
+    restart: "no"
